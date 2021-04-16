@@ -23,17 +23,20 @@ a:hover {
 ===============================================*/
 @media (min-width: 480px) and (max-width: 1024px) {
   /*================================
-	ヘッダー
+		ヘッダー
 	================================*/
   header {
     height: 50vh;
-    background-image: url(images/mainImage.png);
+    background-image: url(../images/mainImage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   header .header-container {
+    background-color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -43,12 +46,19 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 15px 20px;
     margin: 0 auto;
-    max-width: 1100px;
+    width: 100vw;
+    opacity: 0.9;
+    position: fixed;
   }
   header .header-container .header-logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
     height: 40px;
+    line-height: 40px;
+    margin-left: 40px;
   }
   header .header-container .header-nav {
     display: none;
@@ -67,11 +77,10 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
-    text-align: center;
     font-size: 24px;
+    color: white;
   }
   .overlay {
     position: fixed;
@@ -223,22 +232,6 @@ a:hover {
     font-size: 20px;
   }
   /*================================
-		リンク
-	================================*/
-  .link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-top: 50px;
-  }
-  .link a img {
-    width: 100%;
-  }
-  /*================================
 		フッター
 	================================*/
   footer {
@@ -306,13 +299,14 @@ a:hover {
 	================================*/
   header {
     height: 80vh;
-    background-image: url(images/mainImage.png);
+    background-image: url(../images/mainImage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
   }
   header .header-container {
+    background-color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -322,24 +316,32 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 30px;
     margin: 0 auto;
-    max-width: 1100px;
+    width: 100vw;
+    opacity: 0.9;
+    position: fixed;
   }
   header .header-container .header-logo {
-    height: 60px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 24px;
+    height: 50px;
+    margin-left: 50px;
+    line-height: 50px;
   }
   header .header-container .header-nav .header-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    line-height: 50px;
   }
   header .header-container .header-nav .header-list li {
-    margin: 0 30px;
+    margin: 0 40px;
   }
   header .header-container .header-nav .header-list li a {
     text-decoration: none;
-    color: #000;
+    color: black;
     font-size: 18px;
     display: inline-block;
   }
@@ -350,11 +352,10 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
-    text-align: center;
     font-size: 48px;
+    color: white;
   }
   .overlay {
     display: none;
@@ -452,21 +453,6 @@ a:hover {
     text-decoration: none;
     padding: 12px 40px;
     font-size: 20px;
-  }
-  /*================================
-		リンク
-	================================*/
-  .link {
-    padding-top: 90px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .link a {
-    width: calc(100% / 3);
-  }
-  .link a img {
-    width: 100%;
   }
   /*================================
 		フッター
