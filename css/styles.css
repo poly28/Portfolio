@@ -1,0 +1,519 @@
+@charset "UTF-8";
+/*================================
+    ▽共通設定
+================================*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrap {
+  overflow: hidden;
+}
+
+a:hover {
+  opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/*===============================================
+	▽スマートフォン・タブレット表示
+	（横幅が480～1024pxは下記スタイル適用）
+===============================================*/
+@media (min-width: 480px) and (max-width: 1024px) {
+  /*================================
+	ヘッダー
+	================================*/
+  header {
+    height: 50vh;
+    background-image: url(images/mainImage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px 20px;
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+  header .header-container .header-logo {
+    height: 40px;
+  }
+  header .header-container .header-nav {
+    display: none;
+  }
+  header .header-container .header-icon {
+    display: block;
+    font-size: 28px;
+  }
+  header .header-container .header-icon #open {
+    cursor: pointer;
+  }
+  header .header-container .header-icon #open.hide {
+    display: none;
+  }
+  header p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    text-align: center;
+    font-size: 24px;
+  }
+  .overlay {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 64px;
+    opacity: 0;
+    text-align: center;
+    pointer-events: none;
+    -webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+  }
+  .overlay #close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .overlay ul {
+    list-style: none;
+  }
+  .overlay ul li {
+    margin-top: 24px;
+    opacity: 0;
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  }
+  .overlay ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+  .overlay.show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .overlay.show li {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .overlay.show li:nth-child(1) {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  .overlay.show li:nth-child(2) {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  .overlay.show li:nth-child(3) {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .overlay.show li:nth-child(4) {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+  /*================================
+		お知らせ
+	================================*/
+  .info {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+  .info .info-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .info .info-list {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .info .info-list li {
+    padding: 30px 0;
+    border-bottom: 1px solid black;
+  }
+  .info .info-list li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+  }
+  .info .info-list li a .date {
+    font-size: 13px;
+  }
+  .info .info-list li a .border {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 5px 8px;
+    margin: 0 30px;
+    font-size: 11px;
+  }
+  .info .info-list li a .message {
+    padding-top: 10px;
+    display: block;
+    font-size: 18px;
+  }
+  /*================================
+		施工事例
+	================================*/
+  .work {
+    padding: 50px 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .work .work-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-align: center;
+  }
+  .work .work-container .work-case {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .work .work-container .work-case h3 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  .work .work-container .work-case p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .work .work-container .work-case .building {
+    height: 280px;
+    width: 430px;
+  }
+  .work .work-container .work-case .more {
+    margin-top: 15px;
+    width: 300px;
+    height: 47px;
+  }
+  .work .work-list {
+    text-align: center;
+  }
+  .work .work-list .work-list-btn {
+    display: inline-block;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    padding: 12px 40px;
+    font-size: 20px;
+  }
+  /*================================
+		リンク
+	================================*/
+  .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 50px;
+  }
+  .link a img {
+    width: 100%;
+  }
+  /*================================
+		フッター
+	================================*/
+  footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+  }
+  footer .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 50px;
+    margin: 0 auto;
+    max-width: 1100px;
+    margin-bottom: 30px;
+  }
+  footer .footer-container .footer-logo {
+    height: 40px;
+  }
+  footer .footer-container .footer-nav .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+  }
+  footer .footer-container .footer-nav .footer-list li {
+    margin: 0 30px;
+    margin-bottom: 30px;
+  }
+  footer .footer-container .footer-nav .footer-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+  }
+  footer p {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+
+/*===============================================
+	▽PC表示
+	（横幅が1024px以上は下記スタイル適用）
+===============================================*/
+@media (min-width: 1025px) {
+  /*================================
+		ヘッダー
+	================================*/
+  header {
+    height: 80vh;
+    background-image: url(images/mainImage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+  header .header-container .header-logo {
+    height: 60px;
+  }
+  header .header-container .header-nav .header-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .header-container .header-nav .header-list li {
+    margin: 0 30px;
+  }
+  header .header-container .header-nav .header-list li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    display: inline-block;
+  }
+  header .header-container .header-icon {
+    display: none;
+  }
+  header p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    text-align: center;
+    font-size: 48px;
+  }
+  .overlay {
+    display: none;
+  }
+  /*================================
+		お知らせ
+	================================*/
+  .info {
+    height: 543px;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 90px 0;
+  }
+  .info .info-title {
+    margin-bottom: 60px;
+    font-size: 38px;
+    text-align: center;
+  }
+  .info .info-list {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .info .info-list li {
+    padding: 30px 0;
+    border-bottom: 1px solid black;
+  }
+  .info .info-list li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+  }
+  .info .info-list li a .date {
+    font-size: 18px;
+  }
+  .info .info-list li a .border {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 5px 8px;
+    margin: 0 30px;
+    font-size: 11px;
+  }
+  .info .info-list li a .message {
+    font-size: 17px;
+  }
+  /*================================
+		施工事例
+	================================*/
+  .work {
+    padding: 90px 0;
+    height: 876px;
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .work .work-title {
+    margin-bottom: 60px;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 90px;
+  }
+  .work .work-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .work .work-container .work-case {
+    text-align: center;
+  }
+  .work .work-container .work-case h3 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  .work .work-container .work-case p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .work .work-container .work-case .building {
+    height: 280px;
+    width: 430px;
+  }
+  .work .work-container .work-case .more {
+    margin-top: 15px;
+    width: 300px;
+    height: 47px;
+  }
+  .work .work-list {
+    text-align: center;
+  }
+  .work .work-list .work-list-btn {
+    margin-top: 80px;
+    display: inline-block;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    padding: 12px 40px;
+    font-size: 20px;
+  }
+  /*================================
+		リンク
+	================================*/
+  .link {
+    padding-top: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .link a {
+    width: calc(100% / 3);
+  }
+  .link a img {
+    width: 100%;
+  }
+  /*================================
+		フッター
+	================================*/
+  footer {
+    height: 154px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+  }
+  footer .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 1100px;
+    margin-bottom: 60px;
+  }
+  footer .footer-container .footer-logo {
+    height: 40px;
+  }
+  footer .footer-container .footer-nav .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .footer-container .footer-nav .footer-list li {
+    margin: 0 30px;
+  }
+  footer .footer-container .footer-nav .footer-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+  }
+  footer p {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

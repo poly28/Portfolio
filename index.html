@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- スタイルのリセット -->
+		<link rel="stylesheet" href="css\reset.css" />
+		<!-- スタイル用CSSの読み込み -->
+		<link rel="stylesheet" href="css\styles.css" />
+		<!-- Material+Iconsの追加 -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<title>Poly's Portfolio</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- ヘッダーここから -->
+			<header>
+				<div class="header-container">
+					<!-- タイトルロゴここから -->
+					<a href="#">
+						<img
+							src="images/header_logo.png"
+							alt="ヘッダーロゴ"
+							class="header-logo"
+						/>
+					</a>
+					<!-- タイトルロゴここまで -->
+
+					<!-- ヘッダーナビゲーションここから -->
+					<nav class="header-nav">
+						<ul class="header-list">
+							<li><a href="">企業理念</a></li>
+							<li><a href="">施工事例</a></li>
+							<li><a href="">採用情報</a></li>
+							<li><a href="">お問い合わせ</a></li>
+						</ul>
+					</nav>
+					<!-- <div class="header-icon" id="open">
+						<img src="images\hamburger.svg" alt="ハンバーガーメニュー" />
+					</div> -->
+					<div class="sp-menu header-icon">
+						<span class="material-icons" id="open"> menu </span>
+					</div>
+					<!-- ヘッダーナビゲーションここまで -->
+				</div>
+
+				<!-- ファーストセンテンスここから -->
+				<p>街を作る。未来を作る。</p>
+				<!-- ファーストセンテンスここまで -->
+				<!-- ハンバーガーメニュー表示時のオーバーレイ -->
+				<div class="overlay">
+					<span class="material-icons" id="close"> close </span>
+					<nav>
+						<ul>
+							<li><a href="#">企業理念</a></li>
+							<li><a href="#">施工事例</a></li>
+							<li><a href="#">採用情報</a></li>
+							<li><a href="#">お問い合わせ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<!-- ヘッダーここまで -->
+
+			<!-- お知らせここから -->
+			<section class="info">
+				<h2 class="info-title">お知らせ</h2>
+
+				<ul class="info-list">
+					<li>
+						<a href="#">
+							<span class="date">2020.11.17</span>
+							<span class="border">お知らせ</span>
+							<span class="message">本社打ち合わせ室が完成しました。</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<span class="date"> 2020.11.10 </span>
+							<span class="border">お知らせ</span>
+							<span class="message">
+								【メディア掲載】住宅雑誌 2020年11月号
+							</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<span class="date"> 2020.11.01 </span>
+							<span class="border">お知らせ</span>
+							<span class="message"> ホームページが完成しました。 </span>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<!-- お知らせここまで -->
+
+			<!-- 施工事例ここから-->
+			<section class="work">
+				<h2 class="work-title">施工事例</h2>
+
+				<div class="work-container">
+					<!-- 施工事例1 -->
+					<div class="work-case">
+						<img class="building" src="images/building1.png" alt="施工事例1" />
+						<h3>M様邸新築工事</h3>
+						<p>埼玉県</p>
+						<a href="#">
+							<img class="more" src="images/more.png" alt="詳細を見る" />
+						</a>
+					</div>
+
+					<!-- 施工事例2 -->
+					<div class="work-case">
+						<img class="building" src="images/building2.png" alt="施工事例2" />
+						<h3>スカイビル</h3>
+						<p>東京都</p>
+						<a href="#">
+							<img class="more" src="images/more.png" alt="詳細を見る" />
+						</a>
+					</div>
+				</div>
+				<div class="work-list">
+					<a class="work-list-btn" href="#">施工実績一覧</a>
+				</div>
+			</section>
+			<!-- 施工事例ここまで -->
+
+			<!-- リンクここから -->
+			<div class="link">
+				<a href="#"><img src="images/company.png" alt="企業理念" /></a>
+				<a href="#"><img src="images/recruit.png" alt="採用情報" /></a>
+				<a href="#"><img src="images/contact.png" alt="お問い合わせ" /></a>
+			</div>
+			<!-- リンクここまで -->
+
+			<!-- フッターここから -->
+			<footer>
+				<div class="footer-container">
+					<!-- フッターロゴここから -->
+					<a href="#">
+						<img
+							src="images\footer_logo.png"
+							alt="蒼乃建設　ロゴ"
+							class="footer-logo"
+						/>
+					</a>
+					<!-- フッターロゴここまで -->
+
+					<nav class="footer-nav">
+						<ul class="footer-list">
+							<li><a href="">企業理念</a></li>
+							<li><a href="">施工事例</a></li>
+							<li><a href="">採用情報</a></li>
+							<li><a href="">お問い合わせ</a></li>
+						</ul>
+					</nav>
+				</div>
+				<p>Copyright © 2020 Aono Corporation.</p>
+			</footer>
+			<!-- フッターここまで -->
+		</div>
+		<script src="js\main.js"></script>
+	</body>
+</html>

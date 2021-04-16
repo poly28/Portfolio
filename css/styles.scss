@@ -1,0 +1,487 @@
+/*================================
+    ▽共通設定
+================================*/
+
+* {
+	box-sizing: border-box;
+}
+.wrap {
+	overflow: hidden;
+}
+
+a:hover {
+	opacity: 0.5;
+	transition: 0.3s;
+}
+/*===============================================
+	▽スマートフォン・タブレット表示
+	（横幅が480～1024pxは下記スタイル適用）
+===============================================*/
+@media (min-width: 480px) and (max-width: 1024px) {
+	/*================================
+	ヘッダー
+	================================*/
+	header {
+		height: 50vh;
+		background-image: url(images/mainImage.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+
+		.header-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 15px 20px;
+			margin: 0 auto;
+			max-width: 1100px;
+
+			.header-logo {
+				height: 40px;
+			}
+			.header-nav {
+				display: none;
+			}
+			.header-icon {
+				display: block;
+				font-size: 28px;
+				#open {
+					cursor: pointer;
+					&.hide {
+						display: none;
+					}
+				}
+			}
+		}
+
+		p {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			transform: translate(-50%);
+			text-align: center;
+			font-size: 24px;
+		}
+	}
+	.overlay {
+		position: fixed;
+		background-color: rgba(255, 255, 255, 0.9);
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 64px;
+		opacity: 0;
+		text-align: center;
+		pointer-events: none;
+		transition: opacity 0.6s;
+		#close {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			font-size: 32px;
+			cursor: pointer;
+		}
+		ul {
+			list-style: none;
+			li {
+				margin-top: 24px;
+				opacity: 0;
+				transform: translateY(16px);
+				transition: opacity 0.3s, transform 0.3s;
+				a {
+					text-decoration: none;
+					color: black;
+					font-size: 20px;
+				}
+			}
+		}
+		&.show {
+			pointer-events: auto;
+			opacity: 1;
+			li {
+				opacity: 1;
+				transform: none;
+				&:nth-child(1) {
+					transition-delay: 0.1s;
+				}
+				&:nth-child(2) {
+					transition-delay: 0.2s;
+				}
+				&:nth-child(3) {
+					transition-delay: 0.3s;
+				}
+				&:nth-child(4) {
+					transition-delay: 0.4s;
+				}
+			}
+		}
+	}
+
+	/*================================
+		お知らせ
+	================================*/
+	.info {
+		width: 100%;
+		margin: 0 auto;
+		padding: 50px 20px;
+		.info-title {
+			font-size: 24px;
+			text-align: center;
+		}
+
+		.info-list {
+			max-width: 700px;
+			margin: 0 auto;
+
+			li {
+				padding: 30px 0;
+				border-bottom: 1px solid black;
+				a {
+					display: block;
+					color: black;
+					text-decoration: none;
+					.date {
+						font-size: 13px;
+					}
+					.border {
+						border: 1px solid black;
+						display: inline-block;
+						padding: 5px 8px;
+						margin: 0 30px;
+						font-size: 11px;
+					}
+					.message {
+						padding-top: 10px;
+						display: block;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+	/*================================
+		施工事例
+	================================*/
+
+	.work {
+		padding: 50px 20px;
+		width: 100%;
+		margin: 0 auto;
+		.work-title {
+			margin-bottom: 30px;
+			font-size: 24px;
+			text-align: center;
+		}
+		.work-container {
+			.work-case {
+				text-align: center;
+				margin-bottom: 50px;
+				h3 {
+					font-size: 24px;
+					margin-top: 30px;
+				}
+				p {
+					font-size: 14px;
+					margin-top: 15px;
+				}
+				.building {
+					height: 280px;
+					width: 430px;
+				}
+				.more {
+					margin-top: 15px;
+					width: 300px;
+					height: 47px;
+				}
+			}
+		}
+		.work-list {
+			text-align: center;
+			.work-list-btn {
+				display: inline-block;
+				border: 1px solid black;
+				color: black;
+				text-decoration: none;
+				padding: 12px 40px;
+				font-size: 20px;
+			}
+		}
+	}
+
+	/*================================
+		リンク
+	================================*/
+	.link {
+		display: flex;
+		flex-direction: column;
+		padding-top: 50px;
+		a {
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	/*================================
+		フッター
+	================================*/
+	footer {
+		// height: 154px;
+		width: 100%;
+		margin: 0 auto;
+		background-color: black;
+		.footer-container {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+			padding-top: 50px;
+			margin: 0 auto;
+			max-width: 1100px;
+			margin-bottom: 30px;
+			.footer-logo {
+				height: 40px;
+			}
+			.footer-nav {
+				.footer-list {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-bottom: 20px;
+
+					li {
+						margin: 0 30px;
+						margin-bottom: 30px;
+						a {
+							text-decoration: none;
+							color: white;
+							font-size: 18px;
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+
+		p {
+			color: white;
+			font-size: 12px;
+			text-align: center;
+			padding-bottom: 10px;
+		}
+	}
+}
+
+/*===============================================
+	▽PC表示
+	（横幅が1024px以上は下記スタイル適用）
+===============================================*/
+@media (min-width: 1025px) {
+	/*================================
+		ヘッダー
+	================================*/
+	header {
+		height: 80vh;
+		background-image: url(images/mainImage.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+
+		.header-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 30px;
+			margin: 0 auto;
+			max-width: 1100px;
+
+			.header-logo {
+				height: 60px;
+			}
+			.header-nav {
+				.header-list {
+					display: flex;
+					li {
+						margin: 0 30px;
+						a {
+							text-decoration: none;
+							color: #000;
+							font-size: 18px;
+							display: inline-block;
+						}
+					}
+				}
+			}
+			.header-icon {
+				display: none;
+			}
+		}
+
+		p {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			transform: translate(-50%);
+			text-align: center;
+			font-size: 48px;
+		}
+	}
+	.overlay {
+		display: none;
+	}
+	/*================================
+		お知らせ
+	================================*/
+	.info {
+		height: 543px;
+		width: 1100px;
+		margin: 0 auto;
+		padding: 90px 0;
+		.info-title {
+			margin-bottom: 60px;
+			font-size: 38px;
+			text-align: center;
+		}
+
+		.info-list {
+			max-width: 700px;
+			margin: 0 auto;
+
+			li {
+				padding: 30px 0;
+				border-bottom: 1px solid black;
+				a {
+					display: block;
+					color: black;
+					text-decoration: none;
+					.date {
+						font-size: 18px;
+					}
+					.border {
+						border: 1px solid black;
+						display: inline-block;
+						padding: 5px 8px;
+						margin: 0 30px;
+						font-size: 11px;
+					}
+					.message {
+						font-size: 17px;
+					}
+				}
+			}
+		}
+	}
+
+	/*================================
+		施工事例
+	================================*/
+
+	.work {
+		padding: 90px 0;
+		height: 876px;
+		width: 1100px;
+		margin: 0 auto;
+		.work-title {
+			margin-bottom: 60px;
+			font-size: 38px;
+			text-align: center;
+			margin-bottom: 90px;
+		}
+		.work-container {
+			display: flex;
+			justify-content: space-around;
+			.work-case {
+				text-align: center;
+				h3 {
+					font-size: 24px;
+					margin-top: 30px;
+				}
+				p {
+					font-size: 14px;
+					margin-top: 15px;
+				}
+				.building {
+					height: 280px;
+					width: 430px;
+				}
+				.more {
+					margin-top: 15px;
+					width: 300px;
+					height: 47px;
+				}
+			}
+		}
+		.work-list {
+			text-align: center;
+			.work-list-btn {
+				margin-top: 80px;
+				display: inline-block;
+				border: 1px solid black;
+				color: black;
+				text-decoration: none;
+				padding: 12px 40px;
+				font-size: 20px;
+			}
+		}
+	}
+	/*================================
+		リンク
+	================================*/
+	.link {
+		padding-top: 90px;
+		display: flex;
+		a {
+			width: calc(100% / 3);
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	/*================================
+		フッター
+	================================*/
+	footer {
+		height: 154px;
+		width: 100%;
+		margin: 0 auto;
+		background-color: black;
+		.footer-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 30px;
+			margin: 0 auto;
+			max-width: 1100px;
+			margin-bottom: 60px;
+			.footer-logo {
+				height: 40px;
+			}
+			.footer-nav {
+				.footer-list {
+					display: flex;
+					li {
+						margin: 0 30px;
+						a {
+							text-decoration: none;
+							color: white;
+							font-size: 18px;
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+
+		p {
+			color: white;
+			font-size: 12px;
+			text-align: center;
+			padding-bottom: 10px;
+		}
+	}
+}
