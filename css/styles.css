@@ -424,7 +424,7 @@ a:hover {
   .Works .Works-container .Works-case {
     text-align: center;
     border: 2px solid gray;
-    border-radius: 10px;
+    border-radius: 12px;
   }
   .Works .Works-container .Works-case h3 {
     font-size: 24px;
@@ -455,6 +455,41 @@ a:hover {
     text-decoration: none;
     padding: 12px 40px;
     font-size: 20px;
+  }
+  /*================================
+		Skills
+	================================*/
+  .Skills .Skills-container {
+    height: 600px;
+    width: 100vw;
+    padding: 90px 0;
+    margin: 0 auto;
+    background-color: #efefef;
+  }
+  .Skills .Skills-container .Skills-title {
+    margin-bottom: 60px;
+    font-size: 38px;
+    text-align: center;
+  }
+  .Skills .Skills-container .Skills-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .Skills .Skills-container .Skills-group img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    -webkit-box-shadow: -5px 5px #4b9600;
+            box-shadow: -5px 5px #4b9600;
+  }
+  .Skills .Skills-container .Skills-group p {
+    font-size: 18px;
+    line-height: 40px;
   }
   /*================================
 		フッター
