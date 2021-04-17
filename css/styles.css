@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+body {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', sans-serif;
+}
+
 .wrap {
   overflow: hidden;
 }
@@ -149,39 +153,39 @@ a:hover {
   /*================================
 		お知らせ
 	================================*/
-  .info {
+  .About {
     width: 100%;
     margin: 0 auto;
     padding: 50px 20px;
   }
-  .info .info-title {
+  .About .About-title {
     font-size: 24px;
     text-align: center;
   }
-  .info .info-list {
+  .About .About-list {
     max-width: 700px;
     margin: 0 auto;
   }
-  .info .info-list li {
+  .About .About-list li {
     padding: 30px 0;
     border-bottom: 1px solid black;
   }
-  .info .info-list li a {
+  .About .About-list li a {
     display: block;
     color: black;
     text-decoration: none;
   }
-  .info .info-list li a .date {
+  .About .About-list li a .date {
     font-size: 13px;
   }
-  .info .info-list li a .border {
+  .About .About-list li a .border {
     border: 1px solid black;
     display: inline-block;
     padding: 5px 8px;
     margin: 0 30px;
     font-size: 11px;
   }
-  .info .info-list li a .message {
+  .About .About-list li a .message {
     padding-top: 10px;
     display: block;
     font-size: 18px;
@@ -295,7 +299,7 @@ a:hover {
 ===============================================*/
 @media (min-width: 1025px) {
   /*================================
-		ヘッダー
+		Header
 	================================*/
   header {
     height: 80vh;
@@ -361,44 +365,19 @@ a:hover {
     display: none;
   }
   /*================================
-		お知らせ
+		About
 	================================*/
-  .info {
-    height: 543px;
+  .About .About-container {
+    height: 600px;
     width: 1100px;
-    margin: 0 auto;
     padding: 90px 0;
+    margin: 0 auto;
+    background-color: gray;
   }
-  .info .info-title {
+  .About .About-container .About-title {
     margin-bottom: 60px;
     font-size: 38px;
     text-align: center;
-  }
-  .info .info-list {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .info .info-list li {
-    padding: 30px 0;
-    border-bottom: 1px solid black;
-  }
-  .info .info-list li a {
-    display: block;
-    color: black;
-    text-decoration: none;
-  }
-  .info .info-list li a .date {
-    font-size: 18px;
-  }
-  .info .info-list li a .border {
-    border: 1px solid black;
-    display: inline-block;
-    padding: 5px 8px;
-    margin: 0 30px;
-    font-size: 11px;
-  }
-  .info .info-list li a .message {
-    font-size: 17px;
   }
   /*================================
 		施工事例
