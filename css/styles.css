@@ -193,41 +193,41 @@ a:hover {
   /*================================
 		施工事例
 	================================*/
-  .work {
+  .Works {
     padding: 50px 20px;
     width: 100%;
     margin: 0 auto;
   }
-  .work .work-title {
+  .Works .Works-title {
     margin-bottom: 30px;
     font-size: 24px;
     text-align: center;
   }
-  .work .work-container .work-case {
+  .Works .Works-container .Works-case {
     text-align: center;
     margin-bottom: 50px;
   }
-  .work .work-container .work-case h3 {
+  .Works .Works-container .Works-case h3 {
     font-size: 24px;
     margin-top: 30px;
   }
-  .work .work-container .work-case p {
+  .Works .Works-container .Works-case p {
     font-size: 14px;
     margin-top: 15px;
   }
-  .work .work-container .work-case .building {
+  .Works .Works-container .Works-case .building {
     height: 280px;
     width: 430px;
   }
-  .work .work-container .work-case .more {
+  .Works .Works-container .Works-case .more {
     margin-top: 15px;
     width: 300px;
     height: 47px;
   }
-  .work .work-list {
+  .Works .Works-list {
     text-align: center;
   }
-  .work .work-list .work-list-btn {
+  .Works .Works-list .Works-list-btn {
     display: inline-block;
     border: 1px solid black;
     color: black;
@@ -369,62 +369,82 @@ a:hover {
 	================================*/
   .About .About-container {
     height: 600px;
-    width: 1100px;
+    width: 100vw;
     padding: 90px 0;
     margin: 0 auto;
-    background-color: gray;
+    background-color: #efefef;
   }
   .About .About-container .About-title {
     margin-bottom: 60px;
     font-size: 38px;
     text-align: center;
   }
+  .About .About-container .About-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .About .About-container .About-group img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    -webkit-box-shadow: -5px 5px #4b9600;
+            box-shadow: -5px 5px #4b9600;
+  }
+  .About .About-container .About-group p {
+    font-size: 18px;
+    line-height: 40px;
+  }
   /*================================
 		施工事例
 	================================*/
-  .work {
+  .Works {
     padding: 90px 0;
     height: 876px;
     width: 1100px;
     margin: 0 auto;
   }
-  .work .work-title {
+  .Works .Works-title {
     margin-bottom: 60px;
     font-size: 38px;
     text-align: center;
     margin-bottom: 90px;
   }
-  .work .work-container {
+  .Works .Works-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .work .work-container .work-case {
+  .Works .Works-container .Works-case {
     text-align: center;
   }
-  .work .work-container .work-case h3 {
+  .Works .Works-container .Works-case h3 {
     font-size: 24px;
     margin-top: 30px;
   }
-  .work .work-container .work-case p {
+  .Works .Works-container .Works-case p {
     font-size: 14px;
     margin-top: 15px;
   }
-  .work .work-container .work-case .building {
+  .Works .Works-container .Works-case .building {
     height: 280px;
     width: 430px;
   }
-  .work .work-container .work-case .more {
+  .Works .Works-container .Works-case .more {
     margin-top: 15px;
     width: 300px;
     height: 47px;
   }
-  .work .work-list {
+  .Works .Works-list {
     text-align: center;
   }
-  .work .work-list .work-list-btn {
+  .Works .Works-list .Works-list-btn {
     margin-top: 80px;
     display: inline-block;
     border: 1px solid black;
