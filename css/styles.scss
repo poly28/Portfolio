@@ -69,7 +69,6 @@ a:hover {
 				}
 			}
 		}
-		// ファーストセンテンス
 		p {
 			position: absolute;
 			top: 50%;
@@ -135,7 +134,7 @@ a:hover {
 	}
 
 	/*================================
-		お知らせ
+		About
 	================================*/
 	.About {
 		width: 100%;
@@ -328,7 +327,6 @@ a:hover {
 			}
 		}
 
-		// ファーストセンテンス
 		p {
 			position: absolute;
 			top: 50%;
@@ -377,12 +375,12 @@ a:hover {
 	}
 
 	/*================================
-		施工事例
+		Works
 	================================*/
 
 	.Works {
 		padding: 90px 0;
-		height: 876px;
+		height: 1000px;
 		width: 1100px;
 		margin: 0 auto;
 		.Works-title {
@@ -396,6 +394,8 @@ a:hover {
 			justify-content: space-around;
 			.Works-case {
 				text-align: center;
+				border: 2px solid gray;
+				border-radius: 10px;
 				h3 {
 					font-size: 24px;
 					margin-top: 30px;
@@ -404,12 +404,14 @@ a:hover {
 					font-size: 14px;
 					margin-top: 15px;
 				}
-				.building {
-					height: 280px;
-					width: 430px;
+				img {
+					height: 300px;
+					width: 400px;
+					border-radius: 10px 10px 0 0;
 				}
 				.more {
-					margin-top: 15px;
+					// margin-top: 15px;
+					margin: 30px 0;
 					width: 300px;
 					height: 47px;
 				}
@@ -433,42 +435,18 @@ a:hover {
 		フッター
 	================================*/
 	footer {
-		height: 154px;
-		width: 100%;
+		height: 40px;
+		width: 100vw;
 		margin: 0 auto;
 		background-color: black;
 		.footer-container {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding-top: 30px;
-			margin: 0 auto;
-			max-width: 1100px;
-			margin-bottom: 60px;
-			.footer-logo {
-				height: 40px;
+			padding-top: 10px;
+			p {
+				color: white;
+				font-size: 12px;
+				font-weight: bold;
+				text-align: center;
 			}
-			.footer-nav {
-				.footer-list {
-					display: flex;
-					li {
-						margin: 0 30px;
-						a {
-							text-decoration: none;
-							color: white;
-							font-size: 18px;
-							display: inline-block;
-						}
-					}
-				}
-			}
-		}
-
-		p {
-			color: white;
-			font-size: 12px;
-			text-align: center;
-			padding-bottom: 10px;
 		}
 	}
 }
