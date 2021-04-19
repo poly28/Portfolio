@@ -17,11 +17,21 @@ a:hover {
 	opacity: 0.5;
 	transition: 0.3s;
 }
+/*================================
+    ▽共通カラー
+================================*/
+
+$skillBorder: #bbbaba;
+$workCaseBorder: gray;
+$backGroundColor: #efefef;
+$thBackGround: skyblue;
+$trBackGround: #e1f5ff;
+
 /*===============================================
 	▽スマートフォン・タブレット表示
 	（横幅が480～1024pxは下記スタイル適用）
 ===============================================*/
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px,) and (max-width: 1024px,) {
 	/*================================
 		ヘッダー
 	================================*/
@@ -349,7 +359,6 @@ a:hover {
 			width: 100vw;
 			padding: 90px 0;
 			margin: 0 auto;
-			background-color: #efefef;
 			.About-title {
 				margin-bottom: 60px;
 				font-size: 38px;
@@ -381,8 +390,10 @@ a:hover {
 	.Works {
 		padding: 90px 0;
 		height: 1000px;
-		width: 1100px;
+		width: 100vw;
 		margin: 0 auto;
+		background-color: $backGroundColor;
+
 		.Works-title {
 			margin-bottom: 60px;
 			font-size: 38px;
@@ -394,7 +405,7 @@ a:hover {
 			justify-content: space-around;
 			.Works-case {
 				text-align: center;
-				border: 2px solid gray;
+				border: 2px solid $workCaseBorder;
 				border-radius: 12px;
 				h3 {
 					font-size: 24px;
@@ -439,7 +450,6 @@ a:hover {
 			width: 100vw;
 			padding: 90px 0;
 			margin: 0 auto;
-			background-color: #efefef;
 			.Skills-title {
 				margin-bottom: 60px;
 				font-size: 38px;
@@ -451,14 +461,15 @@ a:hover {
 				margin: 0 auto;
 
 				table {
-					background-color: tomato;
 					margin: 0 auto;
-					width: 100%;
+					width: 80%;
 					height: 200px;
 					thead {
 						tr {
-							border-bottom: 1px solid #efefef;
+							border-bottom: 1px solid $skillBorder;
 							th {
+								background-color: $thBackGround;
+								width: calc(100% / 3);
 								font-weight: bold;
 								padding: 15px 0;
 								font-size: 18px;
@@ -467,7 +478,10 @@ a:hover {
 					}
 					tbody {
 						tr {
-							border-bottom: 1px solid #efefef;
+							border-bottom: 1px solid $skillBorder;
+							&:nth-child(2n) {
+								background-color: $trBackGround;
+							}
 
 							td {
 								padding: 15px 0;
@@ -480,7 +494,7 @@ a:hover {
 	}
 
 	/*================================
-		フッター
+		footer
 	================================*/
 	footer {
 		height: 40px;
