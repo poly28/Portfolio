@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*================================
-    ▽共通設定
+    ▽共通スタイル
 ================================*/
 * {
   -webkit-box-sizing: border-box;
@@ -24,11 +24,14 @@ a:hover {
 /*================================
     ▽共通カラー
 ================================*/
+/*================================
+    ▽共通フォントサイズ
+================================*/
 /*===============================================
 	▽スマートフォン・タブレット表示
 	（横幅が480～1024pxは下記スタイル適用）
 ===============================================*/
-@media (min-width: 480px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   /*================================
 		ヘッダー
 	================================*/
@@ -39,8 +42,6 @@ a:hover {
     background-size: cover;
     background-position: center;
     position: relative;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
   }
   header .header-container {
     background-color: #fff;
@@ -63,30 +64,29 @@ a:hover {
     font-weight: bold;
     color: black;
     font-size: 18px;
-    height: 40px;
-    line-height: 40px;
-    margin-left: 40px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 20px;
   }
   header .header-container .header-nav {
     display: none;
   }
-  header .header-container .header-icon {
-    display: block;
-    font-size: 28px;
-  }
-  header .header-container .header-icon #open {
+  header .header-container .Hamburger #open {
     cursor: pointer;
+    margin-right: 20px;
+    font-size: 25px;
+    line-height: 50px;
   }
-  header .header-container .header-icon #open.hide {
+  header .header-container .Hamburger #open.hide {
     display: none;
   }
-  header p {
+  header .header-title {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
-    font-size: 24px;
+    font-size: 28px;
     color: white;
   }
   .overlay {
@@ -105,7 +105,7 @@ a:hover {
   }
   .overlay #close {
     position: absolute;
-    top: 16px;
+    top: 10px;
     right: 16px;
     font-size: 32px;
     cursor: pointer;
@@ -156,42 +156,37 @@ a:hover {
   /*================================
 		About
 	================================*/
-  .About {
-    width: 100%;
+  /*================================
+		About
+	================================*/
+  .About .About-container {
+    width: 100vw;
+    padding: 70px 0;
     margin: 0 auto;
-    padding: 50px 20px;
   }
-  .About .About-title {
-    font-size: 24px;
+  .About .About-container .About-title {
+    margin-bottom: 30px;
+    font-size: 28px;
     text-align: center;
   }
-  .About .About-list {
-    max-width: 700px;
+  .About .About-container .About-group {
+    width: 100%;
     margin: 0 auto;
+    text-align: center;
   }
-  .About .About-list li {
-    padding: 30px 0;
-    border-bottom: 1px solid black;
+  .About .About-container .About-group img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
   }
-  .About .About-list li a {
-    display: block;
-    color: black;
-    text-decoration: none;
+  .About .About-container .About-group .About-message {
+    margin: 40px;
+    line-height: 24px;
+    text-align: left;
   }
-  .About .About-list li a .date {
-    font-size: 13px;
-  }
-  .About .About-list li a .border {
-    border: 1px solid black;
-    display: inline-block;
-    padding: 5px 8px;
-    margin: 0 30px;
-    font-size: 11px;
-  }
-  .About .About-list li a .message {
-    padding-top: 10px;
-    display: block;
+  .About .About-container .About-group .About-message p {
     font-size: 18px;
+    padding: 12px 0;
   }
   /*================================
 		施工事例
