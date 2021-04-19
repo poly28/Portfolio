@@ -39,7 +39,7 @@ $title: 28px;
 // @media screen and (min-width: 480px,) and (max-width: 1024px,) {
 @media screen and (max-width: 1024px,) {
 	/*================================
-		ヘッダー
+		header
 	================================*/
 	header {
 		height: 50vh;
@@ -153,9 +153,6 @@ $title: 28px;
 	/*================================
 		About
 	================================*/
-	/*================================
-		About
-	================================*/
 	.About {
 		.About-container {
 			// height: 600px;
@@ -190,44 +187,62 @@ $title: 28px;
 	}
 
 	/*================================
-		施工事例
+		Works
 	================================*/
-
 	.Works {
-		padding: 50px 20px;
-		width: 100%;
+		padding: 90px 0;
+		width: 100vw;
 		margin: 0 auto;
+		background-color: $backGroundColor;
+
 		.Works-title {
 			margin-bottom: 30px;
-			font-size: 24px;
+			font-size: $title;
 			text-align: center;
 		}
 		.Works-container {
 			.Works-case {
-				text-align: center;
-				margin-bottom: 50px;
-				h3 {
-					font-size: 24px;
-					margin-top: 30px;
-				}
-				p {
-					font-size: 14px;
-					margin-top: 15px;
-				}
-				.building {
-					height: 280px;
-					width: 430px;
-				}
-				.more {
-					margin-top: 15px;
-					width: 300px;
-					height: 47px;
+				.Works-ul {
+					.Work-li {
+						text-align: center;
+						border: 2px solid $workCaseBorder;
+						border-radius: 12px;
+						margin: 50px 20%;
+
+						img {
+							height: 100%;
+							width: 100%;
+							border-radius: 10px 10px 0 0;
+						}
+						h3 {
+							font-size: 24px;
+							margin: 20px 0;
+						}
+						.Work-description {
+							margin: 30px;
+							margin-bottom: 0;
+							p {
+								font-size: 14px;
+								margin-top: 15px;
+							}
+						}
+						.Work-details {
+							display: inline-block;
+							text-decoration: none;
+							border-top: 1px solid black;
+							border-bottom: 1px solid black;
+							margin: 30px 0;
+							padding: 15px 50px;
+							color: black;
+						}
+					}
 				}
 			}
 		}
-		.Works-list {
+		.Works-btn {
 			text-align: center;
-			.Works-list-btn {
+			.Works-btn-more {
+				margin-top: 40px;
 				display: inline-block;
 				border: 1px solid black;
 				color: black;
@@ -237,52 +252,72 @@ $title: 28px;
 			}
 		}
 	}
-
 	/*================================
-		フッター
+		Skills
 	================================*/
-	footer {
-		// height: 154px;
-		width: 100%;
-		margin: 0 auto;
-		background-color: black;
-		.footer-container {
-			display: flex;
-			flex-direction: column-reverse;
-			align-items: center;
-			padding-top: 50px;
+	.Skills {
+		.Skills-container {
+			height: 600px;
+			width: 100vw;
+			padding: 90px 0;
 			margin: 0 auto;
-			max-width: 1100px;
-			margin-bottom: 30px;
-			.footer-logo {
-				height: 40px;
+			.Skills-title {
+				margin-bottom: 60px;
+				font-size: 38px;
+				text-align: center;
 			}
-			.footer-nav {
-				.footer-list {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					margin-bottom: 20px;
+			.Skills-table {
+				width: 1100px;
+				text-align: center;
+				margin: 0 auto;
 
-					li {
-						margin: 0 30px;
-						margin-bottom: 30px;
-						a {
-							text-decoration: none;
-							color: white;
-							font-size: 18px;
-							display: inline-block;
+				table {
+					margin: 0 auto;
+					width: 80%;
+					height: 200px;
+					thead {
+						tr {
+							border-bottom: 1px solid $skillBorder;
+							th {
+								background-color: $thBackGround;
+								width: calc(100% / 3);
+								font-weight: bold;
+								padding: 15px 0;
+								font-size: 18px;
+							}
+						}
+					}
+					tbody {
+						tr {
+							border-bottom: 1px solid $skillBorder;
+							&:nth-child(2n) {
+								background-color: $trBackGround;
+							}
+							td {
+								padding: 15px 0;
+							}
 						}
 					}
 				}
 			}
 		}
-
-		p {
-			color: white;
-			font-size: 12px;
-			text-align: center;
-			padding-bottom: 10px;
+	}
+	/*================================
+		footer
+	================================*/
+	footer {
+		height: 40px;
+		width: 100vw;
+		margin: 0 auto;
+		background-color: black;
+		.footer-container {
+			padding-top: 10px;
+			p {
+				color: white;
+				font-size: 12px;
+				font-weight: bold;
+				text-align: center;
+			}
 		}
 	}
 }
@@ -486,7 +521,6 @@ $title: 28px;
 							&:nth-child(2n) {
 								background-color: $trBackGround;
 							}
-
 							td {
 								padding: 15px 0;
 							}
