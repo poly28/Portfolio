@@ -17,6 +17,7 @@ a:hover {
 	opacity: 0.5;
 	transition: 0.3s;
 }
+
 /*================================
     ▽共通カラー
 ================================*/
@@ -190,10 +191,11 @@ $title: 28px;
 		Works
 	================================*/
 	.Works {
-		padding: 90px 0;
+		padding: 70px 0;
 		width: 100vw;
 		margin: 0 auto;
 		background-color: $backGroundColor;
+		position: relative;
 
 		.Works-title {
 			margin-bottom: 30px;
@@ -205,50 +207,38 @@ $title: 28px;
 				.Works-ul {
 					.Work-li {
 						text-align: center;
-						border: 2px solid $workCaseBorder;
-						border-radius: 12px;
 						margin: 50px 20%;
 
 						img {
 							height: 100%;
 							width: 100%;
-							border-radius: 10px 10px 0 0;
 						}
 						h3 {
-							font-size: 24px;
-							margin: 20px 0;
-						}
-						.Work-description {
-							margin: 30px;
-							margin-bottom: 0;
-							p {
-								font-size: 14px;
-								margin-top: 15px;
-							}
-						}
-						.Work-details {
-							display: inline-block;
-							text-decoration: none;
-							border-top: 1px solid black;
-							border-bottom: 1px solid black;
-							margin: 30px 0;
-							padding: 15px 50px;
-							color: black;
+							font-size: 18px;
+							margin: 10px 0;
 						}
 					}
 				}
 			}
 		}
-		.Works-btn {
+		.mask {
+			position: fixed;
+			background-color: rgba(0, 0, 0, 0.5);
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 64px;
+			opacity: 0;
 			text-align: center;
-			.Works-btn-more {
-				margin-top: 40px;
-				display: inline-block;
-				border: 1px solid black;
-				color: black;
-				text-decoration: none;
-				padding: 12px 40px;
-				font-size: 20px;
+			pointer-events: none;
+			transition: opacity 0.5s;
+			&.show {
+				pointer-events: auto;
+				opacity: 1;
+			}
+			&.hide {
+				display: none;
 			}
 		}
 	}
