@@ -113,7 +113,7 @@
 			<!-- Worksここまで -->
 
 			<!-- Skillsここから -->
-			<section id="Skills" class="Skills">
+			<!-- <section id="Skills" class="Skills">
 				<div class="Skills-container">
 						<h2 class="Skills-title">Skills</h2>
 						<div class="Skills-table">		
@@ -145,16 +145,41 @@
 							</table>
 						</div>
 				</div>
-			</section>
+			</section> -->
 			<!-- Skillsここまで -->
 
-			<!-- フッターここから -->
+			<!-- Contactここから -->
+			<section id="Contact" class="Contact">
+				
+			<form name="contact" method="POST" netlify>
+				<p>
+				  <label>Your Name: <input type="text" name="name" /></label>   
+				</p>
+				<p>
+				  <label>Your Email: <input type="email" name="email" /></label>
+				</p>
+				<p>
+				  <label>Your Role: <select name="role[]" multiple>
+					<option value="leader">Leader</option>
+					<option value="follower">Follower</option>
+				  </select></label>
+				</p>
+				<p>
+				  <label>Message: <textarea name="message"></textarea></label>
+				</p>
+				<p>
+				  <button type="submit">Send</button>
+				</p>
+			  </form>
+			<!-- Contactここまで -->
+			
+			<!-- footerここから -->
 			<footer>
 				<div class="footer-container">
 					<p>Copyright © 2021. Poly All Rights Reserved</p>
 				</div>
 			</footer>
-			<!-- フッターここまで -->
+			<!-- footerここまで -->
 		<script src="js\main.js"></script>
 	</body>
 </html>
