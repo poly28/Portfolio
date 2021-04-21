@@ -279,7 +279,15 @@ a:hover {
   /*================================
 		Contact
 	================================*/
-  .contact {
+  .Contact {
+    text-align: center;
+  }
+  .Contact .Contact-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+  }
+  .Contact .Contact-form {
     text-align: center;
   }
   /*================================

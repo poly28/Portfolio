@@ -295,8 +295,16 @@ $title: 28px;
 	/*================================
 		Contact
 	================================*/
-	.contact {
+	.Contact {
 		text-align: center;
+		.Contact-title {
+			margin-bottom: 30px;
+			font-size: $title;
+			text-align: center;
+		}
+		.Contact-form {
+			text-align: center;
+		}
 	}
 
 	/*================================
