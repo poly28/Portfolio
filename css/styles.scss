@@ -22,14 +22,11 @@ a:hover {
     ▽共通カラー
 ================================*/
 
-$skillBorder: #bbbaba;
 $workCaseBorder: gray;
 $backGroundColor: #efefef;
-$thBackGround: skyblue;
-$trBackGround: #e1f5ff;
 $contactBorder: gray;
 $contactBtn: #87e7b0; // ユニバーサルデザイン ベースカラー
-
+$footer: #87e7b0;
 /*================================
     ▽共通フォントサイズ
 ================================*/
@@ -53,14 +50,15 @@ $title: 28px;
 		position: relative;
 
 		.header-container {
+			width: 100vw;
 			background-color: #fff;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			margin: 0 auto;
-			width: 100vw;
 			opacity: 0.9;
 			position: fixed;
+			z-index: 5;
 
 			.header-logo {
 				text-decoration: none;
@@ -146,9 +144,6 @@ $title: 28px;
 				}
 				&:nth-child(3) {
 					transition-delay: 0.3s;
-				}
-				&:nth-child(4) {
-					transition-delay: 0.4s;
 				}
 			}
 		}
@@ -284,6 +279,10 @@ $title: 28px;
 					font-size: 14px;
 					padding: 10px 36px;
 					margin: 20px 0;
+					cursor: pointer;
+					&:hover {
+						opacity: 0.9s;
+					}
 				}
 			}
 		}
@@ -296,7 +295,7 @@ $title: 28px;
 		height: 40px;
 		width: 100vw;
 		margin: 0 auto;
-		background-color: black;
+		background-color: $footer;
 		.footer-container {
 			padding-top: 10px;
 			p {

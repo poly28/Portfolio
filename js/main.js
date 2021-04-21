@@ -6,6 +6,7 @@ const $overlay = document.querySelector('.overlay');
 const $close = document.getElementById('close');
 const $mask = document.querySelector('.mask');
 const $work1 = document.getElementById('work1');
+const $work2 = document.getElementById('work2');
 
 let isMask = false;
 
@@ -19,6 +20,18 @@ $close.addEventListener('click', () => {
 });
 
 $work1.addEventListener('click', () => {
+	$mask.classList.remove('hide');
+	$mask.classList.add('show');
+	isMask = true;
+	if (isMask === true) {
+		$mask.addEventListener('click', () => {
+			$mask.classList.remove('show');
+			$mask.classList.add('hide');
+		});
+	}
+});
+
+$work2.addEventListener('click', () => {
 	$mask.classList.remove('hide');
 	$mask.classList.add('show');
 	isMask = true;
