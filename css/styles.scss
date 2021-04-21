@@ -156,7 +156,6 @@ $title: 28px;
 	================================*/
 	.About {
 		.About-container {
-			// height: 600px;
 			width: 100vw;
 			padding: 70px 0;
 			margin: 0 auto;
@@ -242,68 +241,77 @@ $title: 28px;
 			}
 		}
 	}
-	/*================================
-		Skills
-	================================*/
-	.Skills {
-		.Skills-container {
-			height: 600px;
-			width: 100vw;
-			padding: 90px 0;
-			margin: 0 auto;
-			.Skills-title {
-				margin-bottom: 60px;
-				font-size: 38px;
-				text-align: center;
-			}
-			.Skills-table {
-				width: 1100px;
-				text-align: center;
-				margin: 0 auto;
 
-				table {
-					margin: 0 auto;
-					width: 80%;
-					height: 200px;
-					thead {
-						tr {
-							border-bottom: 1px solid $skillBorder;
-							th {
-								background-color: $thBackGround;
-								width: calc(100% / 3);
-								font-weight: bold;
-								padding: 15px 0;
-								font-size: 18px;
-							}
-						}
-					}
-					tbody {
-						tr {
-							border-bottom: 1px solid $skillBorder;
-							&:nth-child(2n) {
-								background-color: $trBackGround;
-							}
-							td {
-								padding: 15px 0;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 	/*================================
 		Contact
 	================================*/
 	.Contact {
 		text-align: center;
-		.Contact-title {
-			margin-bottom: 30px;
-			font-size: $title;
-			text-align: center;
-		}
-		.Contact-form {
-			text-align: center;
+		.Contact-container {
+			padding: 70px 0;
+			width: 70vw;
+			margin: 0 auto;
+			.Contact-title {
+				margin-bottom: 30px;
+				font-size: $title;
+				text-align: center;
+			}
+			.Contact-form {
+				.Contact-form-name {
+					width: 100%;
+					padding: 4px 12px;
+					font: size 13px;
+					margin-bottom: 12px;
+					border: none;
+					border-bottom: 2px solid gray;
+				}
+				.Contact-form-mail {
+					width: 100%;
+
+					padding: 4px 12px;
+					font: size 13px;
+					margin-bottom: 12px;
+					border: none;
+					border-bottom: 2px solid gray;
+				}
+				.Contact-form-phone {
+					width: 100%;
+
+					padding: 4px 12px;
+					font: size 13px;
+					margin-bottom: 12px;
+					border: none;
+					border-bottom: 2px solid gray;
+				}
+				.Contact-form-company {
+					width: 100%;
+
+					padding: 4px 12px;
+					font: size 13px;
+					margin-bottom: 12px;
+					border: none;
+					border-bottom: 2px solid gray;
+				}
+				.Contact-form-message {
+					width: 100%;
+
+					padding: 4px 12px;
+					font: size 13px;
+					margin-bottom: 20px;
+					border: none;
+					border-bottom: 2px solid gray;
+					height: 100px;
+				}
+				.Contact-btn {
+					border: none;
+					color: white;
+					background-color: #87e7b0;
+					border-radius: 20px;
+					font-size: 14px;
+					padding: 10px 36px;
+					margin-bottom: 20px;
+				}
+			}
 		}
 	}
 

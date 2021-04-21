@@ -150,29 +150,33 @@
 
 			<!-- Contactここから -->
 			<section id="Contact" class="Contact">
-				<h2 class="Contact-title">Contact</h2>
-				
+				<div class="Contact-container">
+
+					<h2 class="Contact-title">Contact</h2>
+					
 				<form class="Contact-form" name="contact" method="POST" netlify>
 					<p>
-						<label>Your Name: <input type="text" name="name" /></label>   
+						<input type="text" name="name" placeholder="Name" class="Contact-form-name"/> 
 					</p>
 					<p>
-						<label>Your Email: <input type="email" name="email" /></label>
-				</p>
-				<p>
-				  <label>Your Role: <select name="role[]" multiple>
-					<option value="leader">Leader</option>
-					<option value="follower">Follower</option>
-				  </select></label>
-				</p>
-				<p>
-				  <label>Message: <textarea name="message"></textarea></label>
-				</p>
-				<p>
-				  <button type="submit">Send</button>
-				</p>
-			  	</form>
-			  </section>
+						<input type="email" name="email" placeholder="E-mail" class="Contact-form-mail"/>
+					</p>
+					<p>
+						<input type="tel" name="tel" placeholder="Phone number" class="Contact-form-phone"/>
+					</p>
+					<p>
+						<input type="text" name="company" placeholder="Company" class="Contact-form-company"/>
+					</p>
+					<p>
+						<textarea name="message" placeholder="Messages" class="Contact-form-message"></textarea></label>
+					</p>
+					<p>
+						<button class="Contact-btn" type="submit">お問い合わせ</button>
+					</p>
+					<p>※お問い合わせから2日以内にお返事させていただきます。</p>
+				</form>
+			</div>
+			</section>
 			<!-- Contactここまで -->
 			
 			<!-- footerここから -->
