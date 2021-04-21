@@ -102,6 +102,7 @@ a:hover {
     pointer-events: none;
     -webkit-transition: opacity 0.6s;
     transition: opacity 0.6s;
+    z-index: 10;
   }
   .overlay #close {
     position: absolute;
@@ -225,6 +226,7 @@ a:hover {
     pointer-events: none;
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
+    z-index: 1;
   }
   .Works .mask.show {
     pointer-events: auto;
@@ -249,31 +251,11 @@ a:hover {
     font-size: 28px;
     text-align: center;
   }
-  .Contact .Contact-container .Contact-form .Contact-form-name {
-    width: 100%;
-    padding: 4px 12px;
-    font: size 13px;
-    margin-bottom: 12px;
-    border: none;
-    border-bottom: 2px solid gray;
-  }
-  .Contact .Contact-container .Contact-form .Contact-form-mail {
-    width: 100%;
-    padding: 4px 12px;
-    font: size 13px;
-    margin-bottom: 12px;
-    border: none;
-    border-bottom: 2px solid gray;
-  }
-  .Contact .Contact-container .Contact-form .Contact-form-phone {
-    width: 100%;
-    padding: 4px 12px;
-    font: size 13px;
-    margin-bottom: 12px;
-    border: none;
-    border-bottom: 2px solid gray;
-  }
-  .Contact .Contact-container .Contact-form .Contact-form-company {
+  .Contact .Contact-container .Contact-form .Contact-form-name,
+  .Contact .Contact-container .Contact-form .Contact-form-mail,
+  .Contact .Contact-container .Contact-form .Contact-form-phone,
+  .Contact .Contact-container .Contact-form .Contact-form-company,
+  .Contact .Contact-container .Contact-form .Contact-form-message {
     width: 100%;
     padding: 4px 12px;
     font: size 13px;
@@ -282,12 +264,6 @@ a:hover {
     border-bottom: 2px solid gray;
   }
   .Contact .Contact-container .Contact-form .Contact-form-message {
-    width: 100%;
-    padding: 4px 12px;
-    font: size 13px;
-    margin-bottom: 20px;
-    border: none;
-    border-bottom: 2px solid gray;
     height: 100px;
   }
   .Contact .Contact-container .Contact-form .Contact-btn {
@@ -297,7 +273,7 @@ a:hover {
     border-radius: 20px;
     font-size: 14px;
     padding: 10px 36px;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
   /*================================
 		footer

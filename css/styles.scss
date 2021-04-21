@@ -27,6 +27,8 @@ $workCaseBorder: gray;
 $backGroundColor: #efefef;
 $thBackGround: skyblue;
 $trBackGround: #e1f5ff;
+$contactBorder: gray;
+$contactBtn: #87e7b0; // ユニバーサルデザイン ベースカラー
 
 /*================================
     ▽共通フォントサイズ
@@ -108,6 +110,7 @@ $title: 28px;
 		text-align: center;
 		pointer-events: none;
 		transition: opacity 0.6s;
+		z-index: 10;
 		#close {
 			position: absolute;
 			top: 10px;
@@ -232,6 +235,7 @@ $title: 28px;
 			text-align: center;
 			pointer-events: none;
 			transition: opacity 0.5s;
+			z-index: 1;
 			&.show {
 				pointer-events: auto;
 				opacity: 1;
@@ -257,49 +261,19 @@ $title: 28px;
 				text-align: center;
 			}
 			.Contact-form {
-				.Contact-form-name {
-					width: 100%;
-					padding: 4px 12px;
-					font: size 13px;
-					margin-bottom: 12px;
-					border: none;
-					border-bottom: 2px solid gray;
-				}
-				.Contact-form-mail {
-					width: 100%;
-
-					padding: 4px 12px;
-					font: size 13px;
-					margin-bottom: 12px;
-					border: none;
-					border-bottom: 2px solid gray;
-				}
-				.Contact-form-phone {
-					width: 100%;
-
-					padding: 4px 12px;
-					font: size 13px;
-					margin-bottom: 12px;
-					border: none;
-					border-bottom: 2px solid gray;
-				}
-				.Contact-form-company {
-					width: 100%;
-
-					padding: 4px 12px;
-					font: size 13px;
-					margin-bottom: 12px;
-					border: none;
-					border-bottom: 2px solid gray;
-				}
+				.Contact-form-name,
+				.Contact-form-mail,
+				.Contact-form-phone,
+				.Contact-form-company,
 				.Contact-form-message {
 					width: 100%;
-
 					padding: 4px 12px;
 					font: size 13px;
-					margin-bottom: 20px;
+					margin-bottom: 12px;
 					border: none;
-					border-bottom: 2px solid gray;
+					border-bottom: 2px solid $contactBorder;
+				}
+				.Contact-form-message {
 					height: 100px;
 				}
 				.Contact-btn {
@@ -309,7 +283,7 @@ $title: 28px;
 					border-radius: 20px;
 					font-size: 14px;
 					padding: 10px 36px;
-					margin-bottom: 20px;
+					margin: 20px 0;
 				}
 			}
 		}
