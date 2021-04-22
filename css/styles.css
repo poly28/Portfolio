@@ -151,10 +151,6 @@ a:hover {
     -webkit-transition-delay: 0.3s;
             transition-delay: 0.3s;
   }
-  .overlay.show li:nth-child(4) {
-    -webkit-transition-delay: 0.4s;
-            transition-delay: 0.4s;
-  }
   /*================================
 		About
 	================================*/
@@ -207,12 +203,19 @@ a:hover {
     margin: 50px 20%;
   }
   .Works .Works-container .Works-case .Works-ul .Work-li img {
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
+    cursor: pointer;
+  }
+  .Works .Works-container .Works-case .Works-ul .Work-li img:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
   }
   .Works .Works-container .Works-case .Works-ul .Work-li h3 {
     font-size: 18px;
-    margin: 10px 0;
+    margin: 20px 0;
   }
   .Works .mask {
     position: fixed;
@@ -269,6 +272,7 @@ a:hover {
   }
   .Contact .Contact-container .Contact-form .Contact-btn {
     border: none;
+    cursor: pointer;
     color: white;
     background-color: #87e7b0;
     border-radius: 20px;
@@ -277,7 +281,11 @@ a:hover {
     margin: 20px 0;
   }
   .Contact .Contact-container .Contact-form .Contact-btn:hover {
-    scale: 0.9;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    opacity: 0.9;
   }
   /*================================
 		footer
@@ -461,49 +469,6 @@ a:hover {
     text-decoration: none;
     padding: 12px 40px;
     font-size: 20px;
-  }
-  /*================================
-		Skills
-	================================*/
-  .Skills .Skills-container {
-    height: 600px;
-    width: 100vw;
-    padding: 90px 0;
-    margin: 0 auto;
-  }
-  .Skills .Skills-container .Skills-title {
-    margin-bottom: 60px;
-    font-size: 38px;
-    text-align: center;
-  }
-  .Skills .Skills-container .Skills-table {
-    width: 1100px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .Skills .Skills-container .Skills-table table {
-    margin: 0 auto;
-    width: 80%;
-    height: 200px;
-  }
-  .Skills .Skills-container .Skills-table table thead tr {
-    border-bottom: 1px solid #bbbaba;
-  }
-  .Skills .Skills-container .Skills-table table thead tr th {
-    background-color: skyblue;
-    width: calc(100% / 3);
-    font-weight: bold;
-    padding: 15px 0;
-    font-size: 18px;
-  }
-  .Skills .Skills-container .Skills-table table tbody tr {
-    border-bottom: 1px solid #bbbaba;
-  }
-  .Skills .Skills-container .Skills-table table tbody tr:nth-child(2n) {
-    background-color: #e1f5ff;
-  }
-  .Skills .Skills-container .Skills-table table tbody tr td {
-    padding: 15px 0;
   }
   /*================================
 		footer
