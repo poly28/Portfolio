@@ -30,13 +30,14 @@ $footer: #87e7b0; // ユニバーサルデザイン ベースカラー
     ▽共通フォントサイズ
 ================================*/
 $title: 28px;
-
+$pcHeaderTitle: 48px;
+$pcTitle: 38px;
 /*===============================================
 	▽ スマートフォン表示
 ===============================================*/
 /*================================
 		header
-	================================*/
+================================*/
 header {
 	height: 50vh;
 	background-image: url(../images/mainImage.jpg);
@@ -154,7 +155,7 @@ header {
 
 /*================================
 		About
-	================================*/
+================================*/
 .About {
 	.About-container {
 		width: 100vw;
@@ -205,7 +206,7 @@ header {
 
 /*================================
 		Works
-	================================*/
+================================*/
 .Works {
 	padding: 70px 0;
 	width: 100vw;
@@ -273,7 +274,7 @@ header {
 
 /*================================
 		Contact
-	================================*/
+================================*/
 .Contact {
 	text-align: center;
 	.Contact-container {
@@ -344,9 +345,9 @@ footer {
 	（横幅が1024px以上は下記スタイル適用）
 ===============================================*/
 @media (min-width: 1025px) {
-	// 	/*================================
-	// 		Header
-	// 	================================*/
+	/*================================
+		Header
+	================================*/
 	header {
 		height: 80vh;
 		.header-container {
@@ -376,13 +377,13 @@ footer {
 		}
 
 		.header-title {
-			font-size: 48px;
+			font-size: $pcHeaderTitle;
 		}
 	}
 
-	// 	/*================================
-	// 		About
-	// 	================================*/
+	/*================================
+		About
+	================================*/
 	.About {
 		.About-container {
 			// 			height: 600px;
@@ -391,12 +392,11 @@ footer {
 			// 			margin: 0 auto;
 			.About-title {
 				// 				margin-bottom: 60px;
-				// 				font-size: 38px;
-				// 				text-align: center;
+				font-size: $pcTitle;
 			}
 			.About-group {
 				display: flex;
-				justify-content: space-around;
+				justify-content: center;
 				// 				width: 1100px;
 				// 				margin: 0 auto;
 				img {
@@ -406,87 +406,114 @@ footer {
 					// 					box-shadow: -5px 5px rgb(75, 150, 0);
 				}
 				p {
-					// 					font-size: 18px;
+					font-size: 14px;
 					// 					line-height: 40px;
 				}
 			}
 		}
 	}
 
-	// 	/*================================
-	// 		Works
-	// 	================================*/
+	/*================================
+		Works
+	================================*/
 
-	// 	.Works {
-	// 		padding: 90px 0;
-	// 		height: 1000px;
-	// 		width: 100vw;
-	// 		margin: 0 auto;
-	// 		background-color: $backGroundColor;
+	.Works {
+		// 		padding: 90px 0;
+		// 		height: 1000px;
+		// 		width: 100vw;
+		// 		margin: 0 auto;
+		// 		background-color: $backGroundColor;
 
-	// 		.Works-title {
-	// 			margin-bottom: 60px;
-	// 			font-size: 38px;
-	// 			text-align: center;
-	// 			margin-bottom: 90px;
-	// 		}
-	// 		.Works-container {
-	// 			display: flex;
-	// 			justify-content: space-around;
-	// 			.Works-case {
-	// 				text-align: center;
-	// 				border: 2px solid $workCaseBorder;
-	// 				border-radius: 12px;
-	// 				h3 {
-	// 					font-size: 24px;
-	// 					margin-top: 30px;
-	// 				}
-	// 				p {
-	// 					font-size: 14px;
-	// 					margin-top: 15px;
-	// 				}
-	// 				img {
-	// 					height: 300px;
-	// 					width: 400px;
-	// 					border-radius: 10px 10px 0 0;
-	// 				}
-	// 				.more {
-	// 					margin: 30px 0;
-	// 					width: 300px;
-	// 					height: 47px;
-	// 				}
-	// 			}
-	// 		}
-	// 		.Works-list {
-	// 			text-align: center;
-	// 			.Works-list-btn {
-	// 				margin-top: 80px;
-	// 				display: inline-block;
-	// 				border: 1px solid black;
-	// 				color: black;
-	// 				text-decoration: none;
-	// 				padding: 12px 40px;
-	// 				font-size: 20px;
-	// 			}
-	// 		}
-	// 	}
-
-	// 	/*================================
-	// 		footer
-	// 	================================*/
-	// 	footer {
-	// 		height: 40px;
-	// 		width: 100vw;
-	// 		margin: 0 auto;
-	// 		background-color: black;
-	// 		.footer-container {
-	// 			padding-top: 10px;
-	// 			p {
-	// 				color: white;
-	// 				font-size: 12px;
-	// 				font-weight: bold;
-	// 				text-align: center;
-	// 			}
-	// 		}
-	// 	}
+		.Works-title {
+			// 			margin-bottom: 60px;
+			font-size: $pcTitle;
+			// 			text-align: center;
+			// 			margin-bottom: 90px;
+		}
+		.Works-container {
+			// 			display: flex;
+			// 			justify-content: space-around;
+			.Works-case {
+				// 				text-align: center;
+				// 				border: 2px solid $workCaseBorder;
+				// 				border-radius: 12px;
+				h3 {
+					// 					font-size: 24px;
+					// 					margin-top: 30px;
+				}
+				p {
+					// 					font-size: 14px;
+					// 					margin-top: 15px;
+				}
+				img {
+					// 					height: 300px;
+					// 					width: 400px;
+					// 					border-radius: 10px 10px 0 0;
+				}
+				.more {
+					// 					margin: 30px 0;
+					// 					width: 300px;
+					// 					height: 47px;
+				}
+			}
+		}
+		.Works-list {
+			// 			text-align: center;
+			.Works-list-btn {
+				// 				margin-top: 80px;
+				// 				display: inline-block;
+				// 				border: 1px solid black;
+				// 				color: black;
+				// 				text-decoration: none;
+				// 				padding: 12px 40px;
+				// 				font-size: 20px;
+			}
+		}
+	}
+	/*================================
+		Contact
+	================================*/
+	.Contact {
+		// 	.Contact-container {
+		// 		padding: 70px 0;
+		// 		width: 70vw;
+		// 		margin: 0 auto;
+		.Contact-title {
+			// 			margin-bottom: 30px;
+			font-size: $pcTitle;
+		}
+		// 		.Contact-form {
+		// 			.Contact-form-name,
+		// 			.Contact-form-mail,
+		// 			.Contact-form-phone,
+		// 			.Contact-form-company,
+		// 			.Contact-form-message {
+		// 				width: 100%;
+		// 				padding: 4px 12px;
+		// 				font: size 13px;
+		// 				margin-bottom: 12px;
+		// 				border: none;
+		// 				border-bottom: 2px solid $contactBorder;
+		// 			}
+		// 			.Contact-form-message {
+		// 				height: 100px;
+		// 			}
+		// 			.Contact-btn {
+		// 				border: none;
+		// 				cursor: pointer;
+		// 				color: white;
+		// 				background-color: #87e7b0;
+		// 				border-radius: 20px;
+		// 				font-size: 14px;
+		// 				padding: 10px 36px;
+		// 				margin: 20px 0;
+		// 				&:hover {
+		// 					transform: scale(1.05);
+		// 					transition: 0.9s;
+		// 					opacity: 0.9;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+	}
 }
