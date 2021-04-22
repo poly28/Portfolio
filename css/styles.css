@@ -29,7 +29,7 @@ a:hover {
 ================================*/
 /*===============================================
 	▽スマートフォン・タブレット表示
-	（横幅が480～1024pxは下記スタイル適用）
+	（横幅が1024pxまでは下記スタイル適用）
 ===============================================*/
 @media screen and (max-width: 1024px) {
   /*================================
@@ -46,6 +46,11 @@ a:hover {
   header .header-container {
     width: 100vw;
     background-color: #fff;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 5;
+  }
+  header .header-container .header-container-group {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -56,25 +61,25 @@ a:hover {
         -ms-flex-align: center;
             align-items: center;
     margin: 0 auto;
-    opacity: 0.9;
-    position: fixed;
-    z-index: 5;
+    padding: 0 30px;
   }
-  header .header-container .header-logo {
+  header .header-container .header-container-group .header-logo {
     text-decoration: none;
     font-weight: bold;
     color: black;
-    font-size: 18px;
+    font-size: 20px;
     height: 50px;
     line-height: 50px;
-    margin-left: 20px;
   }
-  header .header-container .header-nav {
+  header .header-container .header-container-group .header-nav {
     display: none;
   }
   header .header-container .Hamburger #open {
     cursor: pointer;
-    margin-right: 20px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     font-size: 25px;
     line-height: 50px;
   }
@@ -105,12 +110,21 @@ a:hover {
     transition: opacity 0.6s;
     z-index: 10;
   }
-  .overlay #close {
+  .overlay .overlay-container {
+    height: 50px;
+    width: 100vw;
+  }
+  .overlay .overlay-container #close {
+    line-height: 50px;
     position: absolute;
-    top: 10px;
-    right: 16px;
+    top: 0;
+    right: 10px;
     font-size: 32px;
     cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
   .overlay ul {
     list-style: none;

@@ -12,7 +12,6 @@ body {
 .wrap {
 	overflow: hidden;
 }
-
 a:hover {
 	opacity: 0.5;
 	transition: 0.3s;
@@ -26,7 +25,7 @@ $workCaseBorder: gray;
 $backGroundColor: #efefef;
 $contactBorder: gray;
 $contactBtn: #87e7b0; // ユニバーサルデザイン ベースカラー
-$footer: #87e7b0;
+$footer: #87e7b0; // ユニバーサルデザイン ベースカラー
 /*================================
     ▽共通フォントサイズ
 ================================*/
@@ -34,7 +33,7 @@ $title: 28px;
 
 /*===============================================
 	▽スマートフォン・タブレット表示
-	（横幅が480～1024pxは下記スタイル適用）
+	（横幅が1024pxまでは下記スタイル適用）
 ===============================================*/
 // @media screen and (min-width: 480px,) and (max-width: 1024px,) {
 @media screen and (max-width: 1024px,) {
@@ -52,33 +51,35 @@ $title: 28px;
 		.header-container {
 			width: 100vw;
 			background-color: #fff;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin: 0 auto;
 			opacity: 0.9;
 			position: fixed;
 			z-index: 5;
+			.header-container-group {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 0 auto;
+				padding: 0 30px;
 
-			.header-logo {
-				text-decoration: none;
-				font-weight: bold;
-				color: black;
-				font-size: 18px;
-				height: 50px;
-				line-height: 50px;
-				margin-left: 20px;
-			}
+				.header-logo {
+					text-decoration: none;
+					font-weight: bold;
+					color: black;
+					font-size: 20px;
+					height: 50px;
+					line-height: 50px;
+				}
 
-			.header-nav {
-				display: none;
+				.header-nav {
+					display: none;
+				}
 			}
 
 			.Hamburger {
 				// display: block;
 				#open {
 					cursor: pointer;
-					margin-right: 20px;
+					user-select: none;
 					font-size: 25px;
 					line-height: 50px;
 					&.hide {
@@ -109,12 +110,18 @@ $title: 28px;
 		pointer-events: none;
 		transition: opacity 0.6s;
 		z-index: 10;
-		#close {
-			position: absolute;
-			top: 10px;
-			right: 16px;
-			font-size: 32px;
-			cursor: pointer;
+		.overlay-container {
+			height: 50px;
+			width: 100vw;
+			#close {
+				line-height: 50px;
+				position: absolute;
+				top: 0;
+				right: 10px;
+				font-size: 32px;
+				cursor: pointer;
+				user-select: none;
+			}
 		}
 		ul {
 			list-style: none;
