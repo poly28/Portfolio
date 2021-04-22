@@ -380,7 +380,45 @@ footer .footer-container p {
 }
 
 /*===============================================
-	▽PC表示
+	▽ PC表示
 	（横幅が1024px以上は下記スタイル適用）
 ===============================================*/
+@media (min-width: 1025px) {
+  header {
+    height: 80vh;
+  }
+  header .header-container .header-container-group .header-logo {
+    font-size: 24px;
+  }
+  header .header-container .header-container-group .header-nav {
+    display: block;
+  }
+  header .header-container .header-container-group .header-nav .header-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 50px;
+  }
+  header .header-container .header-container-group .header-nav .header-list li {
+    margin: 0 40px;
+  }
+  header .header-container .header-container-group .header-nav .header-list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  header .header-container .Hamburger {
+    display: none;
+  }
+  header .header-title {
+    font-size: 48px;
+  }
+  .About .About-container .About-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
