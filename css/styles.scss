@@ -180,6 +180,22 @@ $title: 28px;
 						padding: 12px 0;
 					}
 				}
+				ul {
+					display: flex;
+					justify-content: center;
+
+					li {
+						a {
+							#Github,
+							#Twitter,
+							#Qiita {
+								height: 100px;
+								width: 100px;
+								margin: 0 20px;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -210,6 +226,7 @@ $title: 28px;
 							height: 90%;
 							width: 90%;
 							cursor: pointer;
+							border-radius: 10px;
 							&:hover {
 								transform: scale(1.05);
 								transition: 0.9s;
@@ -219,6 +236,11 @@ $title: 28px;
 							font-size: 18px;
 							margin: 20px 0;
 						}
+						// wokrの解説を実装予定
+						// .work1-description {
+						// 	background-color: #fff;
+
+						// }
 					}
 				}
 			}
@@ -286,8 +308,8 @@ $title: 28px;
 					padding: 10px 36px;
 					margin: 20px 0;
 					&:hover {
-						transform: scale(1.1);
-						transition: 0.8s;
+						transform: scale(1.05);
+						transition: 0.9s;
 						opacity: 0.9;
 					}
 				}

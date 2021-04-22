@@ -183,6 +183,21 @@ a:hover {
     font-size: 18px;
     padding: 12px 0;
   }
+  .About .About-container .About-group ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .About .About-container .About-group ul li a #Github,
+  .About .About-container .About-group ul li a #Twitter,
+  .About .About-container .About-group ul li a #Qiita {
+    height: 100px;
+    width: 100px;
+    margin: 0 20px;
+  }
   /*================================
 		Works
 	================================*/
@@ -206,6 +221,7 @@ a:hover {
     height: 90%;
     width: 90%;
     cursor: pointer;
+    border-radius: 10px;
   }
   .Works .Works-container .Works-case .Works-ul .Work-li img:hover {
     -webkit-transform: scale(1.05);
@@ -281,10 +297,10 @@ a:hover {
     margin: 20px 0;
   }
   .Contact .Contact-container .Contact-form .Contact-btn:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
     opacity: 0.9;
   }
   /*================================
