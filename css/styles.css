@@ -220,7 +220,7 @@ header .header-title {
   padding: 12px 0;
 }
 
-.About .About-container .About-group ul {
+.About .About-container ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,9 +229,9 @@ header .header-title {
           justify-content: center;
 }
 
-.About .About-container .About-group ul li a #Github,
-.About .About-container .About-group ul li a #Twitter,
-.About .About-container .About-group ul li a #Qiita {
+.About .About-container ul li a #Github,
+.About .About-container ul li a #Twitter,
+.About .About-container ul li a #Qiita {
   height: 100px;
   width: 100px;
   margin: 0 20px;

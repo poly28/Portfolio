@@ -183,19 +183,19 @@ header {
 					padding: 12px 0;
 				}
 			}
-			ul {
-				display: flex;
-				justify-content: center;
+		}
+		ul {
+			display: flex;
+			justify-content: center;
 
-				li {
-					a {
-						#Github,
-						#Twitter,
-						#Qiita {
-							height: 100px;
-							width: 100px;
-							margin: 0 20px;
-						}
+			li {
+				a {
+					#Github,
+					#Twitter,
+					#Qiita {
+						height: 100px;
+						width: 100px;
+						margin: 0 20px;
 					}
 				}
 			}
