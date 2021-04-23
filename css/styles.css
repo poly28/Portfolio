@@ -201,6 +201,16 @@ header .header-title {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .About .About-container .About-group img {
@@ -289,7 +299,7 @@ header .header-title {
 
 .Works .Works-container .Works-case .Works-ul .Work-li h3 {
   font-size: 18px;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .Works .mask {
@@ -449,10 +459,25 @@ footer .footer-container p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .About .About-container .About-group p {
     font-size: 14px;
     line-height: 40px;
+  }
+  .About .About-container ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .About .About-container ul li a #Github,
+  .About .About-container ul li a #Twitter,
+  .About .About-container ul li a #Qiita {
+    height: 100px;
+    width: 100px;
+    margin: 0 30px;
   }
   /*================================
 		Works
