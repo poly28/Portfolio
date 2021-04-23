@@ -25,13 +25,17 @@ $workCaseBorder: gray;
 $backGroundColor: #efefef;
 $contactBorder: gray;
 $contactBtn: #87e7b0; // ユニバーサルデザイン ベースカラー
-$footer: #87e7b0; // ユニバーサルデザイン ベースカラー
+$footerColor: #87e7b0; // ユニバーサルデザイン ベースカラー
 /*================================
     ▽共通フォントサイズ
 ================================*/
+
 $title: 28px;
 $pcHeaderTitle: 48px;
 $pcTitle: 38px;
+$pcWorksTitle: 22px;
+$footerFontSize: 12px;
+
 /*===============================================
 	▽ スマートフォン表示
 ===============================================*/
@@ -178,8 +182,9 @@ header {
 			.About-message {
 				margin: 40px;
 				line-height: 24px;
-				text-align: left;
+				text-align: center;
 				p {
+					text-align: left;
 					font-size: 18px;
 					padding: 12px 0;
 				}
@@ -197,6 +202,11 @@ header {
 						height: 100px;
 						width: 100px;
 						margin: 0 20px;
+						transition: 0.3s;
+						&:hover {
+							transform: scale(1.1);
+							transition: 0.3s;
+						}
 					}
 				}
 			}
@@ -224,11 +234,11 @@ header {
 			.Works-ul {
 				.Work-li {
 					text-align: center;
-					margin: 50px 20%;
+					margin: 100px 20%;
 
 					img {
-						height: 90%;
-						width: 90%;
+						height: 80%;
+						width: 80%;
 						cursor: pointer;
 						border-radius: 10px;
 						transition: 0.3s;
@@ -330,12 +340,12 @@ footer {
 	height: 40px;
 	width: 100vw;
 	margin: 0 auto;
-	background-color: $footer;
+	background-color: $footerColor;
 	.footer-container {
 		padding-top: 10px;
 		p {
 			color: white;
-			font-size: 12px;
+			font-size: $footerFontSize;
 			font-weight: bold;
 			text-align: center;
 		}
@@ -401,15 +411,10 @@ footer {
 				justify-content: center;
 				// 				width: 1100px;
 				// 				margin: 0 auto;
-				img {
-					// 					height: 250px;
-					// 					width: 250px;
-					// 					border-radius: 50%;
-					// 					box-shadow: -5px 5px rgb(75, 150, 0);
-				}
+
 				p {
 					font-size: 14px;
-					// 					line-height: 40px;
+					line-height: 40px;
 				}
 			}
 		}
@@ -418,60 +423,31 @@ footer {
 	/*================================
 		Works
 	================================*/
-
 	.Works {
-		// 		padding: 90px 0;
-		// 		height: 1000px;
-		// 		width: 100vw;
-		// 		margin: 0 auto;
-		// 		background-color: $backGroundColor;
-
 		.Works-title {
-			// 			margin-bottom: 60px;
 			font-size: $pcTitle;
-			// 			text-align: center;
-			// 			margin-bottom: 90px;
 		}
 		.Works-container {
-			// 			display: flex;
-			// 			justify-content: space-around;
 			.Works-case {
-				// 				text-align: center;
-				// 				border: 2px solid $workCaseBorder;
-				// 				border-radius: 12px;
-				h3 {
-					// 					font-size: 24px;
-					// 					margin-top: 30px;
+				.Works-ul {
+					display: flex;
+					justify-content: space-around;
+					.Work-li {
+						padding: 0;
+						margin: 0;
+						img {
+							height: 200px;
+							width: 300px;
+						}
+						h3 {
+							font-size: $pcWorksTitle;
+						}
+					}
 				}
-				p {
-					// 					font-size: 14px;
-					// 					margin-top: 15px;
-				}
-				img {
-					// 					height: 300px;
-					// 					width: 400px;
-					// 					border-radius: 10px 10px 0 0;
-				}
-				.more {
-					// 					margin: 30px 0;
-					// 					width: 300px;
-					// 					height: 47px;
-				}
-			}
-		}
-		.Works-list {
-			// 			text-align: center;
-			.Works-list-btn {
-				// 				margin-top: 80px;
-				// 				display: inline-block;
-				// 				border: 1px solid black;
-				// 				color: black;
-				// 				text-decoration: none;
-				// 				padding: 12px 40px;
-				// 				font-size: 20px;
 			}
 		}
 	}
+
 	/*================================
 		Contact
 	================================*/

@@ -212,10 +212,11 @@ header .header-title {
 .About .About-container .About-group .About-message {
   margin: 40px;
   line-height: 24px;
-  text-align: left;
+  text-align: center;
 }
 
 .About .About-container .About-group .About-message p {
+  text-align: left;
   font-size: 18px;
   padding: 12px 0;
 }
@@ -235,6 +236,17 @@ header .header-title {
   height: 100px;
   width: 100px;
   margin: 0 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.About .About-container ul li a #Github:hover,
+.About .About-container ul li a #Twitter:hover,
+.About .About-container ul li a #Qiita:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 /*================================
@@ -256,12 +268,12 @@ header .header-title {
 
 .Works .Works-container .Works-case .Works-ul .Work-li {
   text-align: center;
-  margin: 50px 20%;
+  margin: 100px 20%;
 }
 
 .Works .Works-container .Works-case .Works-ul .Work-li img {
-  height: 90%;
-  width: 90%;
+  height: 80%;
+  width: 80%;
   cursor: pointer;
   border-radius: 10px;
   -webkit-transition: 0.3s;
@@ -436,12 +448,31 @@ footer .footer-container p {
   }
   .About .About-container .About-group p {
     font-size: 14px;
+    line-height: 40px;
   }
   /*================================
 		Works
 	================================*/
   .Works .Works-title {
     font-size: 38px;
+  }
+  .Works .Works-container .Works-case .Works-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .Works .Works-container .Works-case .Works-ul .Work-li {
+    padding: 0;
+    margin: 0;
+  }
+  .Works .Works-container .Works-case .Works-ul .Work-li img {
+    height: 200px;
+    width: 300px;
+  }
+  .Works .Works-container .Works-case .Works-ul .Work-li h3 {
+    font-size: 22px;
   }
   /*================================
 		Contact
