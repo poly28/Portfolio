@@ -222,20 +222,20 @@ header .header-title {
 }
 
 .About .About-container ul {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .About .About-container ul li a #Github,
 .About .About-container ul li a #Twitter,
 .About .About-container ul li a #Qiita {
-  height: 100px;
-  width: 100px;
-  margin: 0 20px;
+  height: 80px;
+  width: 80px;
+  margin: 0 auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -272,8 +272,8 @@ header .header-title {
 }
 
 .Works .Works-container .Works-case .Works-ul .Work-li img {
-  height: 80%;
-  width: 80%;
+  height: 90%;
+  width: 90%;
   cursor: pointer;
   border-radius: 10px;
   -webkit-transition: 0.3s;
@@ -303,18 +303,22 @@ header .header-title {
   opacity: 0;
   text-align: center;
   pointer-events: none;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   z-index: 1;
 }
 
 .Works .mask.show {
   pointer-events: auto;
   opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .Works .mask.hide {
   display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 /*================================
