@@ -18,7 +18,7 @@ a:hover {
 }
 
 /*================================
-    ▽共通カラー
+    ▽　共通カラー
 ================================*/
 
 $workCaseBorder: gray;
@@ -27,7 +27,7 @@ $contactBorder: gray;
 $contactBtn: #87e7b0; // ユニバーサルデザイン ベースカラー
 $footerColor: #87e7b0; // ユニバーサルデザイン ベースカラー
 /*================================
-    ▽共通フォントサイズ
+    ▽　共通フォントサイズ
 ================================*/
 
 $title: 28px;
@@ -35,6 +35,15 @@ $pcHeaderTitle: 48px;
 $pcTitle: 38px;
 $pcWorksTitle: 22px;
 $footerFontSize: 12px;
+
+/*================================
+    ▽　Z-index制御
+================================*/
+$headerContainerZ: 4;
+$headerGroupZ: 3;
+$overlayZ: 5;
+$modalOverlayZ: 1;
+$modalWindowZ: 2;
 
 /*===============================================
 	▽ スマートフォン表示
@@ -55,13 +64,14 @@ header {
 		background-color: #fff;
 		opacity: 0.9;
 		position: fixed;
-		z-index: 5;
+		z-index: $headerContainerZ;
 		.header-container-group {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			margin: 0 auto;
 			padding: 0 30px;
+			z-index: $headerGroupZ;
 
 			.header-logo {
 				text-decoration: none;
@@ -110,7 +120,7 @@ header {
 	text-align: center;
 	pointer-events: none;
 	transition: opacity 0.6s;
-	z-index: 10;
+	z-index: $overlayZ;
 	.overlay-container {
 		height: 50px;
 		width: 100vw;
@@ -255,16 +265,11 @@ header {
 						font-size: 18px;
 						margin: 30px 0;
 					}
-					// wokrの解説を実装予定
-					// .work1-description {
-					// 	background-color: #fff;
-
-					// }
 				}
 			}
 		}
 	}
-	.mask {
+	#modal-overlay {
 		position: fixed;
 		background-color: rgba(0, 0, 0, 0.5);
 		top: 0;
@@ -272,19 +277,39 @@ header {
 		bottom: 0;
 		left: 0;
 		padding: 64px;
-		opacity: 0;
 		text-align: center;
 		pointer-events: none;
 		transition: 0.3s;
-		z-index: 1;
-		&.show {
-			pointer-events: auto;
-			opacity: 1;
-			transition: 0.3s;
-		}
+		z-index: $modalOverlayZ;
 		&.hide {
 			display: none;
 			transition: 0.3s;
+		}
+	}
+	#modal-window {
+		background-color: white;
+		width: 300px;
+		height: 400px;
+		padding: 20px;
+		border-radius: 4px;
+		position: absolute;
+		top: 40px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		transition: 0.4s;
+		z-index: $modalWindowZ;
+		// wokrの解説を実装予定
+		// .work1-description {
+		// 	background-color: #fff;
+
+		// }
+		p {
+			margin: 0 0 20px;
+		}
+
+		&.hide {
+			transform: translate(0, -5000px);
 		}
 	}
 }
@@ -362,7 +387,7 @@ footer {
 	▽ PC表示
 	（横幅が1024px以上は下記スタイル適用）
 ===============================================*/
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
 	/*================================
 		Header
 	================================*/

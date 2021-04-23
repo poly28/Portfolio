@@ -13,8 +13,9 @@ const $about = document.getElementById('link-about');
 const $works = document.getElementById('link-works');
 const $contact = document.getElementById('link-contact');
 
-// worksのマスク切り替え用
-const $mask = document.querySelector('.mask');
+// worksのmodal-window切り替え用
+const $modal = document.getElementById('modal-window');
+const $mask = document.getElementById('modal-overlay');
 const $work1 = document.getElementById('work1');
 const $work2 = document.getElementById('work2');
 
@@ -43,13 +44,15 @@ $open.addEventListener('click', () => {
 $close.addEventListener('click', () => {
 	HamburgerClose();
 });
-
+// ハンバーガーメニューのclose
 $about.addEventListener('click', () => {
 	HamburgerClose();
 });
+// ハンバーガーメニューのclose
 $works.addEventListener('click', () => {
 	HamburgerClose();
 });
+// ハンバーガーメニューのclose
 $contact.addEventListener('click', () => {
 	HamburgerClose();
 });
@@ -57,26 +60,37 @@ $contact.addEventListener('click', () => {
 /*================================
     ▽ worksの処理
 ================================*/
+// モーダルウィンドウの表示
 $work1.addEventListener('click', () => {
-	$mask.classList.remove('hide');
-	$mask.classList.add('show');
-	isMask = true;
-	if (isMask === true) {
-		$mask.addEventListener('click', () => {
-			$mask.classList.remove('show');
-			$mask.classList.add('hide');
-		});
-	}
+	$mask.classList.toggle('hide');
+	$modal.classList.toggle('hide');
+	// $mask.classList.add('show');
+	// isMask = true;
+	// if (isMask === true) {
+	// 	$mask.addEventListener('click', () => {
+	// 		$mask.classList.remove('show');
+	// 		$mask.classList.add('hide');
+	// 	});
+	// }
 });
 
+// モーダルウィンドウの表示
 $work2.addEventListener('click', () => {
-	$mask.classList.remove('hide');
-	$mask.classList.add('show');
-	isMask = true;
-	if (isMask === true) {
-		$mask.addEventListener('click', () => {
-			$mask.classList.remove('show');
-			$mask.classList.add('hide');
-		});
-	}
+	$mask.classList.toggle('hide');
+	$modal.classList.toggle('hide');
+
+	// $mask.classList.add('show');
+	// isMask = true;
+	// if (isMask === true) {
+	// 	$mask.addEventListener('click', () => {
+	// 		$mask.classList.remove('show');
+	// 		$mask.classList.add('hide');
+	// 	});
+	// }
+});
+
+// モーダルウィンドウを閉じる
+$mask.addEventListener('click', () => {
+	$mask.classList.toggle('hide');
+	$modal.classList.toggle('hide');
 });
