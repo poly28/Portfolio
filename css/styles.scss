@@ -471,42 +471,23 @@ footer {
 		Contact
 	================================*/
 	.Contact {
-		.Contact-title {
-			// 			margin-bottom: 30px;
-			font-size: $pcTitle;
+		.Contact-container {
+			.Contact-title {
+				margin-bottom: 50px;
+				font-size: $pcTitle;
+			}
+			.Contact-form {
+				.Contact-form-name,
+				.Contact-form-mail,
+				.Contact-form-phone,
+				.Contact-form-company {
+					width: 80%;
+				}
+				.Contact-form-message {
+					width: 80%;
+					height: 250px;
+				}
+			}
 		}
-		// 		.Contact-form {
-		// 			.Contact-form-name,
-		// 			.Contact-form-mail,
-		// 			.Contact-form-phone,
-		// 			.Contact-form-company,
-		// 			.Contact-form-message {
-		// 				width: 100%;
-		// 				padding: 4px 12px;
-		// 				font: size 13px;
-		// 				margin-bottom: 12px;
-		// 				border: none;
-		// 				border-bottom: 2px solid $contactBorder;
-		// 			}
-		// 			.Contact-form-message {
-		// 				height: 100px;
-		// 			}
-		// 			.Contact-btn {
-		// 				border: none;
-		// 				cursor: pointer;
-		// 				color: white;
-		// 				background-color: #87e7b0;
-		// 				border-radius: 20px;
-		// 				font-size: 14px;
-		// 				padding: 10px 36px;
-		// 				margin: 20px 0;
-		// 				&:hover {
-		// 					transform: scale(1.05);
-		// 					transition: 0.9s;
-		// 					opacity: 0.9;
-		// 				}
-		// 			}
-		// 		}
-		// 	}
 	}
 }

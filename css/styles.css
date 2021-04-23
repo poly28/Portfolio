@@ -510,8 +510,19 @@ footer .footer-container p {
   /*================================
 		Contact
 	================================*/
-  .Contact .Contact-title {
+  .Contact .Contact-container .Contact-title {
+    margin-bottom: 50px;
     font-size: 38px;
+  }
+  .Contact .Contact-container .Contact-form .Contact-form-name,
+  .Contact .Contact-container .Contact-form .Contact-form-mail,
+  .Contact .Contact-container .Contact-form .Contact-form-phone,
+  .Contact .Contact-container .Contact-form .Contact-form-company {
+    width: 80%;
+  }
+  .Contact .Contact-container .Contact-form .Contact-form-message {
+    width: 80%;
+    height: 250px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
