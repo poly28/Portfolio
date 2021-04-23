@@ -264,13 +264,15 @@ header .header-title {
   width: 90%;
   cursor: pointer;
   border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .Works .Works-container .Works-case .Works-ul .Work-li img:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  -webkit-transition: 0.9s;
-  transition: 0.9s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .Works .Works-container .Works-case .Works-ul .Work-li h3 {
@@ -348,13 +350,15 @@ header .header-title {
   font-size: 14px;
   padding: 10px 36px;
   margin: 20px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .Contact .Contact-container .Contact-form .Contact-btn:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: 0.9s;
-  transition: 0.9s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   opacity: 0.9;
 }
 

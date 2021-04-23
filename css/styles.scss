@@ -231,9 +231,10 @@ header {
 						width: 90%;
 						cursor: pointer;
 						border-radius: 10px;
+						transition: 0.3s;
 						&:hover {
 							transform: scale(1.05);
-							transition: 0.9s;
+							transition: 0.3s;
 						}
 					}
 					h3 {
@@ -311,9 +312,10 @@ header {
 				font-size: 14px;
 				padding: 10px 36px;
 				margin: 20px 0;
+				transition: 0.3s;
 				&:hover {
-					transform: scale(1.05);
-					transition: 0.9s;
+					transform: scale(1.1);
+					transition: 0.3s;
 					opacity: 0.9;
 				}
 			}
