@@ -415,6 +415,7 @@ footer {
 			.About-group {
 				display: flex;
 				justify-content: center;
+				flex-direction: row;
 				align-items: center;
 				p {
 					font-size: 14px;
